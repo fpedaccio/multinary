@@ -46,6 +46,7 @@ pkginfo==1.8.2
 platformdirs==2.4.0
 protobuf==3.19.1
 psycopg==3.0.8
+psycopg2==2.9.3
 py-solc==3.2.0
 py-solc-x==1.1.1
 pycryptodome==3.11.0
