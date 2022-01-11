@@ -54,8 +54,6 @@ Pygments==2.10.0
 pyparsing==3.0.6
 pyrsistent==0.18.0
 python-decouple==3.5
-pywin32==302
-pywin32-ctypes==0.2.0
 readme-renderer==32.0
 requests==2.26.0
 requests-toolbelt==0.9.1
