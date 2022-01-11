@@ -8,7 +8,7 @@
     <h4 style="color:#ffffff">Buscaste la palabra: {{ word }}</h4>
     <div class="word-data">
         <h4 style="color:#ffffff">Descripción general</h4>
-        <hr>
+        
         <h5 style="color:#8f91ee">Definición: </h5>
         <h6 style="color:#ffffff">"{{ definition }}"</h6>
         <h5 style="color:#988fee">Ejemplo: </h5>
@@ -17,6 +17,7 @@
         
         
     </div>
+    <button onclick="history.back()" class="get-back">Retroceder</button>
 </section>
 
 {% endblock %}

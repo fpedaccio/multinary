@@ -1,3 +1,7 @@
+:root {
+  color-scheme: dark;
+}
+
 .home {
   margin-top: 20em;
   margin-bottom: 2em;
@@ -25,7 +29,8 @@
 }
 
 .hero-es {
-  margin-top: 10em;
+  margin-top: 5em;
+  margin-bottom: 4em;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -51,4 +56,43 @@
   backdrop-filter: blur(3.7px);
   -webkit-backdrop-filter: blur(3.7px);
   border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+nav {
+  background-color: #1f1e1e;
+  border-radius: 20px;
+}
+
+img {
+  border-radius: 100%;
+}
+
+nav {
+  margin-top: 1em;
+  min-width: 100%;
+}
+
+/* CSS */
+.get-back {
+  margin-top: 2em;
+  background: linear-gradient(to bottom right, #8f91ee, #b5b6f5);
+  border: 0;
+  border-radius: 12px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 0.2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
 }
