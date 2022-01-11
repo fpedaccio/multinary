@@ -1,0 +1,16 @@
+{% extends './base.html' %}
+
+{% block body %}
+<section class="search">
+    <h6 style="color:#b1b2fb"> Busca una palabra : </h6>
+    <form action="/search/es/" method="POST"> {% csrf_token %}
+        <div class="form-group">
+            <input type="text" class="form-control" name="wordInput" id="wordInput" placeholder="Ejemplo: pared, agua, cohete..." minlength="1", maxlength="30" required>
+        </div>
+        <hr>
+        <div class="form-group">
+            <button type="submit" value="Search" class="btn btn-light"> Buscar </button>  
+        </div>
+    </form>
+</section>
+{% endblock %}

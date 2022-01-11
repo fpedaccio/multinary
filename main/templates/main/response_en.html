@@ -1,0 +1,28 @@
+{% extends './base.html' %}
+
+{% block body %}
+<section class="hero">
+    <h4 style="color:#ffffff">You searched the word: {{ word }}</h4>
+    <div class="word-data">
+        <h4 style="color:#ffffff">Overview</h4>
+        <hr>
+        <h5 style="color:#8f91ee">Definition: </h5>
+        <p style="color:#ffffff">"{{ definition }}"</p>
+        <h5 style="color:#988fee">Example: </h5>
+        <p style="color:#ffffff">"{{ example }}"</p>
+        <hr>
+        <h4 style="color:#ffffff">Phonetics</h4>
+        <hr>
+        <h5 style="color:#988fee">Text: </h5>
+        <p style="color:#ffffff">"{{ phonetic }}"</p>
+        <h5 style="color:#988fee">Audio: </h5>
+        <video width="300" height="50"  controls  name="media">
+            <source src="{{ audio }}" type="audio/mpeg">
+        </video>
+
+        
+        
+    </div>
+</section>
+
+{% endblock %}

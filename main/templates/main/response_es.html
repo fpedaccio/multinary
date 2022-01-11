@@ -1,0 +1,23 @@
+{% extends './base.html' %}
+
+
+
+
+{% block body %}
+<section class="hero-es">
+    <h4 style="color:#ffffff">Buscaste la palabra: {{ word }}</h4>
+    <div class="word-data">
+        <h4 style="color:#ffffff">Descripción general</h4>
+        <hr>
+        <h5 style="color:#8f91ee">Definición: </h5>
+        <h6 style="color:#ffffff">"{{ definition }}"</h6>
+        <h5 style="color:#988fee">Ejemplo: </h5>
+        <h6 style="color:#ffffff">"{{ example }}"</h6>
+
+        
+        
+    </div>
+</section>
+
+{% endblock %}
+
