@@ -1,0 +1,47 @@
+{% extends './base.html' %}
+
+
+
+{% block body %}
+<div class="hero-stats">
+    <section class="stats">
+        <h4 style="color:#b1b2fb">Most searched words</h4>
+    <table class="charts-css column  show-labels"  id="word-chart">
+        
+    
+        <thead>
+        <tr>
+            <th scope="col"> Word </th>
+            <th scope="col"> Count </th>
+        </tr>
+        </thead>
+    
+        <tbody>
+        <tr>
+            <th scope="row"> {{ top_1 }} ({{ top_1_count }}) </th>
+            <td style="--size:{{ relation_1 }}">{{ top_1_count }}</td>
+        </tr>
+        <tr>
+            <th scope="row"> {{ top_2 }} ({{ top_2_count }})  </th>
+            <td style="--size:{{ relation_2 }}"> {{ top_2_count }} </td>
+        </tr>
+        <tr>
+            <th scope="row"> {{ top_3 }} ({{ top_3_count }})  </th>
+            <td style="--size:{{ relation_3 }}"> {{ top_3_count }} </td>
+        </tr>
+        <tr>
+            <th scope="row"> {{ top_4 }} ({{ top_4_count }})  </th>
+            <td style="--size:{{ relation_4 }}"> {{ top_4_count }} </td>
+        </tr>
+        <tr>
+            <th scope="row"> {{ top_5 }} ({{ top_5_count }})  </th>
+            <td style="--size:{{ relation_5 }}"> {{ top_5_count }} </td>
+        </tr>
+        </tbody>
+    
+    </table>
+    <h4 style="color:#b1b2fb">Total searches: </h4>
+    <h5 style="color:#ffffff">{{total_obj}}</h5>
+    </section>
+</div>
+{% endblock %}

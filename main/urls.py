@@ -6,4 +6,5 @@ urlpatterns = [
     path('dictionary/<code>', views.dictionary),
     path('search/en/', views.search_en),
     path('search/es/', views.search_es),
+    path('stats/', views.stats),
 ]
