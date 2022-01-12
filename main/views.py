@@ -58,25 +58,30 @@ def search_es(request):
     return render(request, 'main/response_es.html', {'definition': definition, 'example': example, "word": word})
 
 def stats(request):
-    most_common = list(search_data.objects.values("word").annotate(count=Count('word')).order_by("-count")[:5])
-    total_obj = search_data.objects.count()
-    top_1 = most_common[0]["word"]
-    top_2 = most_common[1]["word"]
-    top_3 = most_common[2]["word"]
-    top_4 = most_common[3]["word"]
-    top_5 = most_common[4]["word"]
-    top_1_count = most_common[0]["count"]
-    top_2_count = most_common[1]["count"]
-    top_3_count = most_common[2]["count"]
-    top_4_count = most_common[3]["count"]
-    top_5_count = most_common[4]["count"]
-    total = top_1_count + top_2_count + top_3_count + top_4_count + top_5_count
-    relation_1 = top_1_count / total
-    relation_2 = top_2_count / total
-    relation_3 = top_3_count / total
-    relation_4 = top_4_count / total
-    relation_5 = top_5_count / total
+    try:
+        most_common = list(search_data.objects.values("word").annotate(count=Count('word')).order_by("-count")[:5])
+        total_obj = search_data.objects.count()
+        top_1 = most_common[0]["word"]
+        top_2 = most_common[1]["word"]
+        top_3 = most_common[2]["word"]
+        top_4 = most_common[3]["word"]
+        top_5 = most_common[4]["word"]
+        top_1_count = most_common[0]["count"]
+        top_2_count = most_common[1]["count"]
+        top_3_count = most_common[2]["count"]
+        top_4_count = most_common[3]["count"]
+        top_5_count = most_common[4]["count"]
+        total = top_1_count + top_2_count + top_3_count + top_4_count + top_5_count
+        relation_1 = top_1_count / total
+        relation_2 = top_2_count / total
+        relation_3 = top_3_count / total
+        relation_4 = top_4_count / total
+        relation_5 = top_5_count / total
+        return render(request, 'main/stats.html', {"total_obj":total_obj,"relation_1": relation_1, "relation_2": relation_2, "relation_3": relation_3,"relation_4": relation_4, "relation_5": relation_5,"total":total,"top_1": top_1, "top_2": top_2, "top_3": top_3, "top_4": top_4, "top_5": top_5, "top_1_count": top_1_count, "top_2_count": top_2_count, "top_3_count": top_3_count, "top_4_count": top_4_count, "top_5_count": top_5_count})
+    except:
+        return render(request, 'main/home.html')
 
-    return render(request, 'main/stats.html', {"total_obj":total_obj,"relation_1": relation_1, "relation_2": relation_2, "relation_3": relation_3,"relation_4": relation_4, "relation_5": relation_5,"total":total,"top_1": top_1, "top_2": top_2, "top_3": top_3, "top_4": top_4, "top_5": top_5, "top_1_count": top_1_count, "top_2_count": top_2_count, "top_3_count": top_3_count, "top_4_count": top_4_count, "top_5_count": top_5_count})
+
+    
    
          
